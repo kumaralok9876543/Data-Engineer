@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "data-craft-career",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  
+  // Environment variables that will be available at runtime
+  "env": {
+    "production": {
+      "name": "data-craft-career-production",
+      "routes": [
+        { "pattern": "*.data-craft-career.com/*" }
+      ]
+    },
+    "staging": {
+      "name": "data-craft-career-staging",
+      "routes": [
+        { "pattern": "*.staging.data-craft-career.com/*" }
+      ]
+    }
+  }
+}
